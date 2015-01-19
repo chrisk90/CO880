@@ -7,7 +7,7 @@ Description:Layout css styles used for the site
 	  require_once("incfooter.php");
 ?>
 <!DOCTYPE html>
-<title>iPhone App</title>
+<title>Taxi App</title>
 <head>
 	<link rel="stylesheet" href="css/layout.css">
 </head>
@@ -28,7 +28,7 @@ Description:Layout css styles used for the site
 	</div>
 	<div class="footer">
 		<a href="viewbookings.php"><div class="bookings button2">Bookings</div></a>
-		<a href="calendarview.php"><div class="calendar button2">Calendar</div></a>
+		<a href="calendarview.php"><div class="calendar button2">Appointments</div></a>
 		<a href="more.php"><div class="more button2">More</div></a>
 	</div>
 </body>
