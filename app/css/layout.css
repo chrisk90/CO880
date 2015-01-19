@@ -28,6 +28,7 @@ body {
 	width: 100%;
 	margin-left: -2px;
 	margin-bottom: 110px;
+	color: black;
 }
 table {
 	overflow-y: scroll;
@@ -43,7 +44,6 @@ tbody {
 	right: 0;
 	padding-top: 65px;
 	height: 70px;
-	color: blue;
 	background-color: yellow;
 	font-size: 1.6em;
 	display: block;
@@ -55,7 +55,6 @@ tbody {
 	right: 0;
 	padding-top: 50px;
 	height: 70px;
-	color: blue;
 	background-color: yellow;
 	display: block;
 	font-size: 1.5em;
@@ -70,43 +69,37 @@ tbody {
 }
 .view-title {
 	display: inline-block;
-	margin-left: 28%;
-	color: black;
+	margin-left: 20%;
 	font-size: 1.6em;
 	font-weight: bold;
 }
 .more-title {
 	display: inline-block;
 	margin-left: 45%;
-	color: black;
 	font-weight: bold;
 	font-size: 1.6em;
 }
 .add-title {
 	display: inline-block;
 	margin-left: 20%;
-	color: black;
 	font-weight: bold;
 	font-size: 1.6em;
 }
 .cal-title {
 	display: inline-block;
-	margin-left: 25%;
-	color: black;
+	margin-left: 20%;
 	font-weight: bold;
 	font-size: 1.6em;
 }
 .customer-title {
 	display: inline-block;
 	margin-left: 25%;
-	color: black;
 	font-weight: bold;
 	font-size: 1.6em;
 }
 .driver-title {
 	display: inline-block;
 	margin-left: 25%;
-	color: black;
 	font-weight: bold;
 	font-size: 1.6em;
 }
@@ -134,15 +127,15 @@ tbody {
 	border: 1px solid #FFD500;
 	box-shadow: 2px 2px 1px #888888;
 	border-radius: 7px;
-	padding: 10px;
+	/*padding: 10px;*/
 	margin-top: -12px;
-	width: 18%;
+	width: 30%;
 	height: 100%;
 	text-align: center;
 }
 .footer div {
-	background-position: 60px 20px;
-	line-height: 115px;
+	background-position: 50% 20px;
+	line-height: 95px;
 	margin-top: -50px;
 	padding-top: 25px;
 	display: inline-block;
@@ -150,16 +143,16 @@ tbody {
 .bookings {
 	background: url(../images/bookmark.png) no-repeat;
 	float: left;
-	margin-left: 35px;
+	margin-left: 30px;
 }
 .calendar {
 	background: url(../images/calendar.png) no-repeat;
-	margin-left: 13%;
+	margin-left: 5px;
 }
 .more {
 	background: url(../images/layer.png) no-repeat;
-	float: right;
-	margin-right: 50px;
+	/*float: right;*/
+	/*margin-right: 50px;*/
 }
 .title-field {
 	padding-left: 40px;
@@ -186,7 +179,7 @@ tbody {
 }
 .addfiller {
 	height: 452px;
-	color: white;
+	background-color: white;
 }
 .night {
 	cursor: pointer;
@@ -195,7 +188,7 @@ tbody {
 
 /*IPHONE
 ==========================================================*/
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 474px) {
 
 input {
 	font-size: 1em;
@@ -233,7 +226,7 @@ body {
 }
 .cal-title {
 	font-size: 1.3em;
-	margin-left: 18%;
+	margin-left: 9%;
 }
 .customer-title {
 	font-size: 1.3em;
@@ -254,17 +247,21 @@ body {
 	font-size: 1.5em;
 }
 .footer div {
-	line-height: 80px;
-	background-position: 25px 20px;
+	line-height: 69px;
+	background-position: 50% 20px;
+	width: 30%;
 }
 .bookings {
-	margin-left: 30px;
+	/*margin-left: 30px;*/
+	margin-left: 0px;
 }
 .calendar {
 	margin-left: 3%;
+	min-width: 33%;
 }
 .more {
-	margin-right: 30px;
+	/*margin-right: 30px;*/
+	float: right;
 }
 .add .button {
 	width: 9%;

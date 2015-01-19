@@ -4,8 +4,12 @@ Date:2014-NOV-17
 Description:Layout css styles used for the site 
 -->
 <?php require_once("inchead.php");
+require_once("conn.php");
 ?>
+
 <!DOCTYPE html>
-<head></head>
-<body></body>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>
+<body id="body"></body>
 </html>
