@@ -1,6 +1,6 @@
 <?php
 date_default_timezone_set('Europe/London');
-	DB::$user = 'xxx';
-	DB::$password = 'xxx';
-	DB::$dbName = 'xxx';
+	DB::$user = 'usr_taxi';
+	DB::$password = 'taxi';
+	DB::$dbName = 'mydb';
 ?>
