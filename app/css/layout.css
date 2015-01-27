@@ -10,7 +10,7 @@ Description:Layout css styles used for the site */
 	width: 0px;
 }
 input {
-	font-size: 1.8em;
+	font-size: 1em;
 	border:	none;
 	width: 100%
 }
@@ -81,13 +81,13 @@ tbody {
 }
 .add-title {
 	display: inline-block;
-	margin-left: 20%;
+	margin-left: 2%;
 	font-weight: bold;
 	font-size: 1.6em;
 }
 .cal-title {
 	display: inline-block;
-	margin-left: 20%;
+	margin-left: 7%;
 	font-weight: bold;
 	font-size: 1.6em;
 }
@@ -119,7 +119,7 @@ tbody {
 	border-radius: 7px;
 	padding: 10px;
 	margin-top: -12px;
-	width: 9%;
+	width: auto;
 	height: 40%;
 	text-align: center;
 }
@@ -143,7 +143,7 @@ tbody {
 .bookings {
 	background: url(../images/bookmark.png) no-repeat;
 	float: left;
-	margin-left: 30px;
+	margin-left: 15px;
 }
 .calendar {
 	background: url(../images/calendar.png) no-repeat;
