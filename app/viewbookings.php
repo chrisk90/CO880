@@ -3,9 +3,12 @@ Author: C.Kelly
 Date:2014-NOV-17
 Description:Layout css styles used for the site 
 -->
-<?php require_once("inchead.php");
-	  require_once("incfooter.php");
-	  require_once("conn.php");
+<?php 
+date_default_timezone_set('Europe/London');
+
+require_once("inchead.php");
+require_once("incfooter.php");
+require_once("conn.php");
 ?>
 <!DOCTYPE html>
 <title>Taxi App</title>
