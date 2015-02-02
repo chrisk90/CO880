@@ -23,6 +23,12 @@ Description:Layout css styles used for the site
 		<table>
 			<tbody>
 				<tr>
+					<td class="title-field">Driver ID</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="text" name="driverid" placeholder="Driver ID"></td>
+				</tr>
+                                <tr>
 					<td class="title-field">Name</td>
 				</tr>
 				<tr>
@@ -33,6 +39,12 @@ Description:Layout css styles used for the site
 				</tr>
 				<tr>
 					<td class="field"><input type="text" name="drivernumber" placeholder="Number"></td>
+				</tr>
+                                <tr>
+					<td class="title-field">Address</td>
+				</tr>
+				<tr>
+					<td class="field"><input type="text" name="address" placeholder="Address"></td>
 				</tr>
 				<tr>
 					<td class="title-field">E-mail Address</td>
