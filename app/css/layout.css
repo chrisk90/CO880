@@ -44,7 +44,7 @@ tbody {
 	right: 0;
 	padding-top: 65px;
 	height: 70px;
-	background-color: yellow;
+	background-color: gray;
 	font-size: 1.6em;
 	display: block;
 }
@@ -55,7 +55,7 @@ tbody {
 	right: 0;
 	padding-top: 50px;
 	height: 70px;
-	background-color: yellow;
+	background-color: gray;
 	display: block;
 	font-size: 1.5em;
 }
@@ -112,9 +112,10 @@ tbody {
 .add {
 	width:30px;
 	text-align: center;
+	color: #04B404;
 }
 .button {
-	border: 1px solid #FFD500;
+	border: 1px solid black;
 	box-shadow: 2px 2px 1px #888888;
 	border-radius: 7px;
 	padding: 10px;
@@ -124,7 +125,7 @@ tbody {
 	text-align: center;
 }
 .button2 {
-	border: 1px solid #FFD500;
+	border: 1px solid black;
 	box-shadow: 2px 2px 1px #888888;
 	border-radius: 7px;
 	/*padding: 10px;*/
@@ -148,6 +149,7 @@ tbody {
 .calendar {
 	background: url(../images/calendar.png) no-repeat;
 	margin-left: 5px;
+	color: white;
 }
 .more {
 	background: url(../images/layer.png) no-repeat;

@@ -51,9 +51,9 @@ Description:Layout css styles used for the site
 				<tr>
 					<td class="field night" onclick="dayMode()">Day Time Mode</td>
 				</tr>
-				<tr>
+				<!-- <tr>
 					<td class="field night" onclick="nightMode()">Night Time Mode</td>
-				</tr>
+				</tr> -->
 				<tr>
 					<td class="field">Logout</td>
 				</tr>
