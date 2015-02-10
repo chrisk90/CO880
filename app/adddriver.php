@@ -3,8 +3,7 @@ Author: C.Kelly
 Date:2014-NOV-17
 Description:Layout css styles used for the site 
 -->
-<?php include 'inchead.php';
-	  include 'incfooter.php';
+<?php 
 	  include 'conn.php';
 ?>
 
@@ -19,8 +18,9 @@ Description:Layout css styles used for the site
 	<div class="header">
 		<a href="drivers.php"><div class="left-button button">Cancel</div></a>
 		<div class="add-title">Add Driver</div>
-		<a href="drivers.php"><div class="right-button button" onclick="submitDriver()">Done</div></a>
+		<a href="#"><div class="right-button button" onclick="submitDriver()"><input type="submit" value="Done"></div></a>
 	</div>
+	
 	<div>
 		<form method="post" action="adddriver.php">
 			<table>
@@ -57,7 +57,7 @@ Description:Layout css styles used for the site
 					</tr>
 				</tbody>
 			</table>
-			<input class="right-button button" type="submit" value="Done" onclick="submitDriver()">
+			<!-- <input class="right-button button" type="submit" value="Done" onclick="submitDriver()"> -->
 		</form>
 	</div>
 	<div class="footer">
@@ -66,22 +66,24 @@ Description:Layout css styles used for the site
 		<a href="more.php"><div class="more button2">More</div></a>
 	</div>
 	<?php
-		$_POST['driverid'] = $_SESSION['driverid'];
-		$_POST['drivername'] = $_SESSION['drivername'];
-		$_POST['drivernumber'] = $_SESSION['drivernumber'];
-		$_POST['address'] = $_SESSION['address'];
-		$_POST['driveremail'] = $_SESSION['driveremail'];
+		// $_POST['driverid'] = $_SESSION['driverid'];
+		// $_POST['drivername'] = $_SESSION['drivername'];
+		// $_POST['drivernumber'] = $_SESSION['drivernumber'];
+		// $_POST['address'] = $_SESSION['address'];
+		// $_POST['driveremail'] = $_SESSION['driveremail'];
 
-		$driver_id = isset($_REQUEST['driverid'])?$_SESSION["driver_id"]:'';
-		$drivername = isset($_REQUEST['drivername'])?$_SESSION["drivername"]:'';
-		$driverphone = isset($_REQUEST['driverphone'])?$_SESSION["drivernumber"]:'';
-		$address = isset($_REQUEST['address'])?$_SESSION["address"]:'';
-		$email = isset($_REQUEST['driveremail'])?$_SESSION["driveremail"]:'';
+		$driver_id = isset($_REQUEST['driverid'])?$_REQUEST["driver_id"]:'';
+		$drivername = isset($_REQUEST['drivername'])?$_REQUEST["drivername"]:'';
+		$driverphone = isset($_REQUEST['driverphone'])?$_REQUEST["drivernumber"]:'';
+		$address = isset($_REQUEST['address'])?$_REQUEST["address"]:'';
+		$email = isset($_REQUEST['driveremail'])?$_REQUEST["driveremail"]:'';
 		//calendar_id should already be owned by user
 		$calendar = 'if7rflqiqu3honr4tstj9db3e4@group.calendar.google.com';
 
-		$sql = "INSERT INTO `driver` (`driver_id`, `name`, `address`, `phone_number`, `email_address`, `calendar_id`, `holiday_id`, `active`) VALUES
-('".$driver_id."', '".$drivername."', '".$address."', '".$drivernumber."', '".$driveremail."', '".$calendar."','something', 1)";
+		$sql = "INSERT INTO 'driver' ('driver_id', 'name', 'address', 'phone_number', 'email_address', 'calendar_id', 'holiday_id', 'active') VALUES
+		('".$driver_id."', '".$drivername."', '".$address."', '".$drivernumber."', '".$driveremail."', '".$calendar."','something', 1)";
+// 		$sql = "INSERT INTO 'driver' ('driver_id', 'name', 'address', 'phone_number', 'email_address', 'calendar_id', 'holiday_id', 'active') VALUES
+// 		('001', 'Bob', '1 Bob Street', '1245', 'bob@taxi.com', 'if7rflqiqu3honr4tstj9db3e4@group.calendar.google.com','something', 1)";
 	?>
 </body>
 </html>

@@ -186,6 +186,9 @@ tbody {
 .night {
 	cursor: pointer;
 }
+.button input{
+	background-color: gray;
+}
 }
 
 /*IPHONE
@@ -244,6 +247,9 @@ body {
 }
 .button {
 	width: auto;
+}
+.button input {
+	background-color: gray !important;
 }
 .field {
 	font-size: 1.5em;
