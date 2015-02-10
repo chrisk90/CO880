@@ -4,7 +4,9 @@ Date:2014-NOV-17
 Description:Layout css styles used for the site 
 -->
 <?php 
-	  include 'conn.php';
+	  // include 'conn.php';
+date_default_timezone_set('Europe/London');
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +20,7 @@ Description:Layout css styles used for the site
 	<div class="header">
 		<a href="drivers.php"><div class="left-button button">Cancel</div></a>
 		<div class="add-title">Add Driver</div>
-		<a href="#"><div class="right-button button" onclick="submitDriver()"><input type="submit" value="Done"></div></a>
+		<a href="conntest.php"><div class="right-button button" onclick="submitDriver()"><input type="submit" value="Done"></div></a>
 	</div>
 	
 	<div>
@@ -29,7 +31,7 @@ Description:Layout css styles used for the site
 						<td class="title-field">Driver ID</td>
 					</tr>
 					<tr>
-						<td class="field"><input type="text" name="driverid" placeholder="Driver ID"></td>
+						<td class="field"><input type="text" name="driver_id" placeholder="Driver ID"></td>
 					</tr>
         	        <tr>
 						<td class="title-field">Name</td>
