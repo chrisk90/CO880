@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('Europe/London');
+
 $firstname = $_POST('firstname');
 $lastname = $_POST('lastname');
 $drivername = $_POST('name');
@@ -81,5 +83,5 @@ $database = new PDO(DB_TYPE.':host='.DB_HOST, DB_USER, DB_PASS);
 //    } else {
 //        echo "Error: " . $sql . "<br>" . $conn->error;
 //    }
-}
+// }
 ?>
