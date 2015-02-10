@@ -1,4 +1,23 @@
 <?php
+<<<<<<< HEAD
+=======
+date_default_timezone_set('Europe/London');
+
+$firstname = $_POST('firstname');
+$lastname = $_POST('lastname');
+$drivername = $_POST('name');
+$address = $_POST('address');
+$dateandtime = $_POST('dateandtime');
+$pickup = $_POST('pickup');
+$dropoff = $_POST('dropoff');
+$phonenumber = $_POST('phonenumber');
+$company = $_POST('company');
+$comments = $_POST('comments');
+$driver = $_POST('driver');
+$email_address = $_POST('driveraddress');
+$method = $_POST('method');
+
+>>>>>>> origin/master
 date_default_timezone_set('Europe/London');
 require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.com/quickstart.php
 
