@@ -4,7 +4,7 @@ Date:2014-NOV-17
 Description:Layout css styles used for the site 
 -->
 <?php
-	include "conn.php";
+date_default_timezone_set('Europe/London');
 ?>
 
 <!DOCTYPE html>

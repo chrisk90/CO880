@@ -32,6 +32,22 @@ define('DB_PASS', 'taxi');
 
 $database = new PDO(DB_TYPE.':host='.DB_HOST, DB_USER, DB_PASS);
 
+$driver_id = isset($_REQUEST['driverid'])?$_REQUEST["driver_id"]:"";
+$drivername = isset($_REQUEST['drivername'])?$_REQUEST["name"]:"";
+$address = isset($_REQUEST['address'])?$_REQUEST["address"]:"";
+$driverphone = isset($_REQUEST['driverphone'])?$_REQUEST["phone_number"]:"";
+$email = isset($_REQUEST['driveremail'])?$_REQUEST["email"]:"";
+
+DB::insert('driver', array (
+	'driver_id' => $driver_id,
+	'name' => $drivername,
+	'address' => $driverphone,
+	'phone_number' => $address,
+	'email_address' => $email,
+	'holiday_id' => $holiday
+));
+
+
 // IF ($method == 'AddDriver'){
 // $sql = "INSERT INTO 'driver' ('driver_id', 'name', 'address', 'phone_number', 'email_address', 'calendar_id', 'holiday_id' ,'active') VALUES
 // ('$driver_id', '$drivername', '$address', '$phone_number', '$email_address', '".$calendar."', '".$holiday."' , 1)";

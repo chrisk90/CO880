@@ -12,6 +12,13 @@ Email: <input type="text" name="email"><br>
 
 </form>
 
+<?php
+$driver_id = isset($_REQUEST['driver_id'])?$_REQUEST["driver_id"]:'';
+$drivername = isset($_REQUEST['name'])?$_REQUEST["name"]:'';
+$address = isset($_REQUEST['address'])?$_REQUEST["address"]:'';
+$drivernumber = isset($_REQUEST['phone_number'])?$_REQUEST["phone_number"]:'';
+$driveremail = isset($_REQUEST['email'])?$_REQUEST["email"]:'';
+?>
 </body>
 
 </html>
