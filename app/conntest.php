@@ -13,6 +13,7 @@ $drivername = isset($_REQUEST['name'])?$_REQUEST["name"]:"";
 $address = isset($_REQUEST['address'])?$_REQUEST["address"]:"";
 $drivernumber = isset($_REQUEST['phone_number'])?$_REQUEST["phone_number"]:"";
 $driveremail = isset($_REQUEST['email'])?$_REQUEST["email"]:"";
+<<<<<<< HEAD
 
 $customer_id = isset($_REQUEST['customer_id'])?$_REQUEST["customer_id"]:"";
 $passenger_name = isset($_REQUEST['passenger_name'])?$_REQUEST["passenger_name"]:"";
@@ -33,6 +34,8 @@ $comment = isset($_REQUEST['comment'])?$_REQUEST["comment"]:"";
 $cal_id = isset($_REQUEST['cal_id'])?$_REQUEST["cal_id"]:"";
 $type_id = isset($_REQUEST['type_id'])?$_REQUEST["type_id"]:"";
 
+=======
+>>>>>>> origin/master
 $method = $_SESSION['method'];
 
 // echo "<script type='text/javascript'>alert('$method');</script>";
@@ -69,6 +72,7 @@ IF ($method === 'AddDriver'){
     // if ($conn->query($sql) === TRUE) {
     //     echo "New driver record created successfully";
     // } else {
+<<<<<<< HEAD
     //     echo "Error: " . $sql . "<br>" . $conn->error; 
 } elseif ($method === 'AddCustomer'){
    DB::insert('customer', array (
@@ -113,6 +117,26 @@ IF ($method === 'AddDriver'){
 	'cal_event_id' => $cal_id,
 	'type_id' => $type_id
 	))
+=======
+    //     echo "Error: " . $sql . "<br>" . $conn->error;
+} 
+//}elseif ($method === 'AddCustomer'){
+//    
+//    if ($conn->query($sql) === TRUE) {
+//        echo "New customer record created successfully";
+//    } else {
+//        echo "Error: " . $sql . "<br>" . $conn->error;
+//    }
+//}elseif ($method === 'AddCompany'){
+//    
+//    if ($conn->query($sql) === TRUE) {
+//        echo "New company record created successfully";
+//    } else {
+//        echo "Error: " . $sql . "<br>" . $conn->error;
+//    } 
+//}elseif ($method === 'AddBooking'){
+//    
+>>>>>>> origin/master
 //    if ($conn->query($sql) === TRUE) {
 //        echo "New booking record created successfully";
 //    } else {
@@ -143,12 +167,20 @@ IF ($method === 'AddDriver'){
 // }
 session_destroy();
 ?>
+<<<<<<< HEAD
 <!DOCTYPE html>
+=======
+<!-- <!DOCTYPE html>
+>>>>>>> origin/master
 <title>Something</title>
 <head>
 <META http-equiv="refresh" content="5;URL=drivers.php">
 </head>
+<<<<<<< HEAD
 <body>
 <p>Successfully added data!</p>
 </body>
 </html>
+=======
+</html> -->
+>>>>>>> origin/master
