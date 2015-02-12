@@ -5,14 +5,13 @@ Description:Layout css styles used for the site
 -->
 <?php
 date_default_timezone_set('Europe/London');
-
-	include "conn.php";
 ?>
 <!DOCTYPE html>
 <title>Taxi App</title>
 <head>
 	<link rel="stylesheet" href="css/layout.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!-- <META http-equiv="refresh" content="5;URL=more.php"> -->
 </head>
 <body id="body">
 	<div class="header">
