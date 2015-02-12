@@ -4,13 +4,7 @@ Date:2014-NOV-17
 Description:Layout css styles used for the site 
 -->
 <?php 
-<<<<<<< HEAD
 date_default_timezone_set('Europe/London');
-=======
-	  // include 'conn.php';
-date_default_timezone_set('Europe/London');
-
->>>>>>> origin/master
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +15,6 @@ date_default_timezone_set('Europe/London');
 	<script src="js/main.js" type="text/javascript"></script>
 </head>
 <body id="body"s>
-<<<<<<< HEAD
 	<form method="post" action="conntest.php">
 		<div class="header">
 			<a href="drivers.php"><div class="left-button button">Cancel</div></a>
@@ -30,16 +23,6 @@ date_default_timezone_set('Europe/London');
 		</div>
 		<!-- onclick="submitDriver()" -->
 		<div>
-=======
-	<div class="header">
-		<a href="drivers.php"><div class="left-button button">Cancel</div></a>
-		<div class="add-title">Add Driver</div>
-		<a href="conntest.php"><div class="right-button button" onclick="submitDriver()"><input type="submit" value="Done"></div></a>
-	</div>
-	
-	<div>
-		<form method="post" action="adddriver.php">
->>>>>>> origin/master
 			<table>
 				<tbody>
 					<tr>
