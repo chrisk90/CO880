@@ -21,8 +21,18 @@ Description:Layout css styles used for the site
 	<div>
 		<table>
 			<tbody>
+				<?php
+					require_once("conn.php");
+					$results = DB::query("SELECT customer_id, pickup, driver_id, pickup_address, dropoff_address, comment FROM booking");
+					foreach ($results as $row) {
+						$passenger = DB::query("SELECT passenger_name FROM customer where customer_id = '".$row['customer_id']."'");
+						echo "<tr>";
+						echo "<td class='field'>".$row['customer_id']." - ".$passenger."<br />".$row['driver_id']."<br />".$row['pickup']."<br />".$row['pickup_address']."<br />".$row['dropoff_address']."<br />".$row['comment']."</td>";
+						echo "</tr>";
+					}
+				?>
 				<tr>
-					<td class="field" style="color:blue;">Load More ...<span class="arrow">></span></td>
+					<td class="field" style="color:blue;"><a href="javascript:history.go(0)">Load More ...<span class="arrow">></span></a></td>
 				</tr>
 			</tbody>
 		</table>

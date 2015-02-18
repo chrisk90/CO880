@@ -26,29 +26,32 @@ date_default_timezone_set('Europe/London');
 						<td class="title-field">Customer Name & Surname</td>
 					</tr>
 					<tr>
-						<td class="field"><input type="text" name="passenger_name" placeholder="Name & Surname"></td>
+						<td class="field"><input type="text" name="pickup_name" placeholder="Name & Surname"></td>
 					</tr>
 					<tr>
 						<td class="title-field">Time of Pickup</td>
 					</tr>
 					<tr>
-						<td class="field"><input type="text" name="pickup" placeholder="HH/MM"></td>
-					</tr>
-<!-- 					<tr>
-						<td class="field"><input type="text" name="pickup" placeholder="Pick Up Address"></td>
-					</tr> -->
-<!-- 					<tr>
-						<td class="title-field">N<sup>o</sup> of Passengers</td>
+						<td class="field"><input type="text" name="pickup" placeholder="YYYY-MM-DD HH:MM:SS"></td>
 					</tr>
 					<tr>
-						<td class="field"><input type="text" name="number_passengers" placeholder="Number"></td>
-					</tr> -->
+						<td class="field"><input type="text" name="pickup_address" placeholder="Pick Up Address"></td>
+					</tr>
 					<tr>
+						<td class="field"><input type="text" name="dropoff_address" placeholder="Drop Off Address"></td>
+					</tr>
+					<tr>
+						<td class="title-field">Payment Method</td>
+					</tr>
+					<tr>
+						<td class="field"><input type="text" name="payment_method" placeholder="Card/Cash"></td>
+					</tr>
+<!-- 					<tr>
 						<td class="title-field">Phone Number</td>
 					</tr>
 					<tr>
 						<td class="title-field">Company</td>
-					</tr>
+					</tr> -->
 					<tr>
 						<td class="title-field">Comments</td>
 					</tr>

@@ -1,21 +1,39 @@
 <?php
-// $firstname = $_POST('firstname');
-// $lastname = $_POST('lastname');
-// $drivername = $_POST('name');
-// $address = $_POST('address');
-// $dateandtime = $_POST('dateandtime');
-// $pickup = $_POST('pickup');
-// $dropoff = $_POST('dropoff');
-// $phonenumber = $_POST('phonenumber');
-// $company = $_POST('company');
-// $comments = $_POST('comments');
-// $driver = $_POST('driver');
-// $email_address = $_POST('driveraddress');
-// $method = $_POST('method');
 
 date_default_timezone_set('Europe/London');
 
 require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.com/quickstart.php
+
+$driver_id = isset($_REQUEST['driver_id'])?$_REQUEST["driver_id"]:"";
+$drivername = isset($_REQUEST['name'])?$_REQUEST["name"]:"";
+$address = isset($_REQUEST['address'])?$_REQUEST["address"]:"";
+$drivernumber = isset($_REQUEST['phone_number'])?$_REQUEST["phone_number"]:"";
+$driveremail = isset($_REQUEST['email'])?$_REQUEST["email"]:"";
+
+$customer_id = isset($_REQUEST['customer_id'])?$_REQUEST["customer_id"]:"0";
+$passenger_name = isset($_REQUEST['passenger_name'])?$_REQUEST["passenger_name"]:"";
+$customer_number = isset($_REQUEST['customer_number'])?$_REQUEST["customer_number"]:"";
+$customer_email = isset($_REQUEST['customer_email'])?$_REQUEST["customer_email"]:"";
+
+$company_id = isset($_REQUEST['company_id'])?$_REQUEST["company_id"]:"0";
+$company_name = isset($_REQUEST['company_name'])?$_REQUEST["company_name"]:"";
+$company_address = isset($_REQUEST['company_address'])?$_REQUEST["company_address"]:"";
+$contact_name = isset($_REQUEST['contact_name'])?$_REQUEST["contact_name"]:"";
+$company_number = isset($_REQUEST['company_number'])?$_REQUEST["company_number"]:"";
+$company_email = isset($_REQUEST['company_email'])?$_REQUEST["company_email"]:"";
+
+$booking_id = isset($_REQUEST['booking_id'])?$_REQUEST["booking_id"]:"0";
+$pickup = isset($_REQUEST['pickup'])?$_REQUEST["pickup"]:"";
+$pickup_name = isset($_REQUEST['pickup_name'])?$_REQUEST["pickup_name"]:"";
+$payment_method = isset($_REQUEST['payment_method'])?$_REQUEST["payment_method"]:"";
+$comment = isset($_REQUEST['comment'])?$_REQUEST["comment"]:"";
+$cal_id = isset($_REQUEST['cal_id'])?$_REQUEST["cal_id"]:"";
+$type_id = isset($_REQUEST['type_id'])?$_REQUEST["type_id"]:"";
+
+$password = isset($_REQUEST['password'])?$_REQUEST["password"]:"";
+$fname = isset($_REQUEST['fname'])?$_REQUEST["fname"]:"";
+$lname = isset($_REQUEST['lname'])?$_REQUEST["lname"]:"";
+$user_email = isset($_REQUEST['user_email'])?$_REQUEST["user_email"]:"";
 
 DB::$user = 'usr_taxi';
 DB::$password = 'taxi';
@@ -24,38 +42,10 @@ DB::$dbName = 'mydb';
 $name ="mydb";
 $user = 'usr_taxi';
 
-
 define('DB_TYPE', 'mysql');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'usr_taxi');
 define('DB_PASS', 'taxi');
 
 $database = new PDO(DB_TYPE.':host='.DB_HOST, DB_USER, DB_PASS);
-
-$driver_id = isset($_REQUEST['driverid'])?$_REQUEST["driver_id"]:"";
-$drivername = isset($_REQUEST['drivername'])?$_REQUEST["name"]:"";
-$address = isset($_REQUEST['address'])?$_REQUEST["address"]:"";
-$driverphone = isset($_REQUEST['driverphone'])?$_REQUEST["phone_number"]:"";
-$email = isset($_REQUEST['driveremail'])?$_REQUEST["email"]:"";
-
-DB::insert('driver', array (
-	'driver_id' => $driver_id,
-	'name' => $drivername,
-	'address' => $driverphone,
-	'phone_number' => $address,
-	'email_address' => $email,
-	'holiday_id' => $holiday
-));
-
-
-// IF ($method == 'AddDriver'){
-// $sql = "INSERT INTO 'driver' ('driver_id', 'name', 'address', 'phone_number', 'email_address', 'calendar_id', 'holiday_id' ,'active') VALUES
-// ('$driver_id', '$drivername', '$address', '$phone_number', '$email_address', '".$calendar."', '".$holiday."' , 1)";
-
-// if ($conn->query($sql) === TRUE) {
-//     echo "New record created successfully";
-// } else {
-//     echo "Error: " . $sql . "<br>" . $conn->error;
-// }
-// }
 ?>

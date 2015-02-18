@@ -13,32 +13,35 @@ $drivername = isset($_REQUEST['name'])?$_REQUEST["name"]:"";
 $address = isset($_REQUEST['address'])?$_REQUEST["address"]:"";
 $drivernumber = isset($_REQUEST['phone_number'])?$_REQUEST["phone_number"]:"";
 $driveremail = isset($_REQUEST['email'])?$_REQUEST["email"]:"";
-<<<<<<< HEAD
 
-$customer_id = isset($_REQUEST['customer_id'])?$_REQUEST["customer_id"]:"";
+$customer_id = isset($_REQUEST['customer_id'])?$_REQUEST["customer_id"]:"0";
 $passenger_name = isset($_REQUEST['passenger_name'])?$_REQUEST["passenger_name"]:"";
 $customer_number = isset($_REQUEST['customer_number'])?$_REQUEST["customer_number"]:"";
 $customer_email = isset($_REQUEST['customer_email'])?$_REQUEST["customer_email"]:"";
 
-$company_id = isset($_REQUEST['company_id'])?$_REQUEST["company_id"]:"";
+$company_id = isset($_REQUEST['company_id'])?$_REQUEST["company_id"]:"0";
 $company_name = isset($_REQUEST['company_name'])?$_REQUEST["company_name"]:"";
 $company_address = isset($_REQUEST['company_address'])?$_REQUEST["company_address"]:"";
 $contact_name = isset($_REQUEST['contact_name'])?$_REQUEST["contact_name"]:"";
 $company_number = isset($_REQUEST['company_number'])?$_REQUEST["company_number"]:"";
 $company_email = isset($_REQUEST['company_email'])?$_REQUEST["company_email"]:"";
 
-$booking_id = isset($_REQUEST['booking_id'])?$_REQUEST["booking_id"]:"";
+$booking_id = isset($_REQUEST['booking_id'])?$_REQUEST["booking_id"]:"0";
 $pickup = isset($_REQUEST['pickup'])?$_REQUEST["pickup"]:"";
+$pickup_name = isset($_REQUEST['pickup_name'])?$_REQUEST["pickup_name"]:"";
+$pickup_address = isset($_REQUEST['pickup_address'])?$_REQUEST["pickup_address"]:"";
+$dropoff_address = isset($_REQUEST['dropoff_address'])?$_REQUEST["dropoff_address"]:"";
 $payment_method = isset($_REQUEST['payment_method'])?$_REQUEST["payment_method"]:"";
 $comment = isset($_REQUEST['comment'])?$_REQUEST["comment"]:"";
 $cal_id = isset($_REQUEST['cal_id'])?$_REQUEST["cal_id"]:"";
 $type_id = isset($_REQUEST['type_id'])?$_REQUEST["type_id"]:"";
 
-=======
->>>>>>> origin/master
-$method = $_SESSION['method'];
+$password = isset($_REQUEST['password'])?$_REQUEST["password"]:"";
+$fname = isset($_REQUEST['fname'])?$_REQUEST["fname"]:"";
+$lname = isset($_REQUEST['lname'])?$_REQUEST["lname"]:"";
+$user_email = isset($_REQUEST['user_email'])?$_REQUEST["user_email"]:"";
 
-// echo "<script type='text/javascript'>alert('$method');</script>";
+$method = $_SESSION['method'];
 
 DB::$user = 'usr_taxi';
 DB::$password = 'taxi';
@@ -68,119 +71,138 @@ IF ($method === 'AddDriver'){
 	'holiday_id' => $holiday,
 	'active' => "1"
 	));
-	
-    // if ($conn->query($sql) === TRUE) {
-    //     echo "New driver record created successfully";
-    // } else {
-<<<<<<< HEAD
-    //     echo "Error: " . $sql . "<br>" . $conn->error; 
-} elseif ($method === 'AddCustomer'){
-   DB::insert('customer', array (
-   	'customer_id' => $customer_id,
+	echo "<!DOCTYPE html>";
+	echo "<title>Taxi App</title>";
+	echo "<head>";
+	echo "<META http-equiv='refresh' content='2;URL=drivers.php'>";
+	echo "</head>";
+	echo "<body>";
+	echo "<p>Successfully added data!</p>";
+	echo "</body>";
+	echo "</html>";
+}
+elseif ($method === 'AddCustomer'){
+    DB::insert('customer', array (
+    'customer_id' => '0',
    	'passenger_name' => $passenger_name,
    	'phone_number' => $customer_number,
    	'email_address' => $customer_email
-   	))
-
-   // if ($conn->query($sql) === TRUE) {
-   //     echo "New customer record created successfully";
-   // } else {
-   //     echo "Error: " . $sql . "<br>" . $conn->error;
-   // }
-} elseif ($method === 'AddCompany'){
-   DB::insert('customer', array (
-	'company_id' => $company_id,
+   	));
+    DB::insertId();
+   	echo "<!DOCTYPE html>";
+	echo "<title>Taxi App</title>";
+	echo "<head>";
+	echo "<META http-equiv='refresh' content='2;URL=customers.php'>";
+	echo "</head>";
+	echo "<body>";
+	echo "<p>Successfully added data!</p>";
+	echo "</body>";
+	echo "</html>";
+}
+elseif ($method === 'AddCompany'){
+	DB::insert('customer', array (
+    'company_id' => '0',
 	'name' => $company_name,
 	'address' => $company_address,
 	'contact_name' => $contact_name,
 	'phone_number' => $company_number,
 	'email_address' => $company_email
-	))
-
-   // if ($conn->query($sql) === TRUE) {
-   //     echo "New company record created successfully";
-   // } else {
-   //     echo "Error: " . $sql . "<br>" . $conn->error;
-   // } 
+	));
+	DB::insertId();
+   	echo "<!DOCTYPE html>";
+	echo "<title>Taxi App</title>";
+	echo "<head>";
+	echo "<META http-equiv='refresh' content='2;URL=companies.php'>";
+	echo "</head>";
+	echo "<body>";
+	echo "<p>Successfully added data!</p>";
+	echo "</body>";
+	echo "</html>";
 }
-} elseif ($method === 'AddBooking'){
-	$customer_id = DB::query("SELECT customer_id FROM customer WHERE passenger_name = '".$passenger_name."'")
-	$company_id = DB::query("SELECT company_id FROM comapny WHERE contact_name = '".$passenger_name."'")
+elseif ($method === 'AddBooking'){
+	$customer_id = DB::queryFirstField("SELECT customer_id FROM customer WHERE passenger_name = '".$pickup_name."'");
+	$driver_id = DB::queryFirstField("SELECT driver_id FROM driver WHERE active = '1'");
+	if ($payment_method == "Card") {
+		$payment_method_id = 1;
+	}
+	elseif ($payment_method == "Cash") {
+		$payment_method_id = 2;
+	}
+	else {
+		$payment_method_id = 0;
+	}
 	DB::insert('booking', array (
-	'booking_id' => $booking_id,
+	'booking_id' => '0',
 	'pickup' => $pickup,
+	'pickup_address' => $pickup_address,
+	'dropoff_address' => $dropoff_address,
 	'customer_id' => $customer_id,
 	'driver_id' => $driver_id,
-	'payment_method_id' => $payment_method,
-	'company_id' => $company_id,
-	'comment' => $comment,
-	'cal_event_id' => $cal_id,
-	'type_id' => $type_id
-	))
-=======
-    //     echo "Error: " . $sql . "<br>" . $conn->error;
-} 
-//}elseif ($method === 'AddCustomer'){
-//    
-//    if ($conn->query($sql) === TRUE) {
-//        echo "New customer record created successfully";
-//    } else {
-//        echo "Error: " . $sql . "<br>" . $conn->error;
-//    }
-//}elseif ($method === 'AddCompany'){
-//    
-//    if ($conn->query($sql) === TRUE) {
-//        echo "New company record created successfully";
-//    } else {
-//        echo "Error: " . $sql . "<br>" . $conn->error;
-//    } 
-//}elseif ($method === 'AddBooking'){
-//    
->>>>>>> origin/master
-//    if ($conn->query($sql) === TRUE) {
-//        echo "New booking record created successfully";
-//    } else {
-//        echo "Error: " . $sql . "<br>" . $conn->error;
-//    }
+	'payment_method_id' => $payment_method_id,
+	'comment' => $comment
+	));
+	DB::insertId();
+	echo "<!DOCTYPE html>";
+	echo "<title>Taxi App</title>";
+	echo "<head>";
+	echo "<META http-equiv='refresh' content='2;URL=viewbookings.php'>";
+	echo "</head>";
+	echo "<body>";
+	echo "<p>Successfully added data!</p>";
+	echo "</body>";
+	echo "</html>";
 }
-// } elseif ($method === 'Companies'){
-//    
-//    if ($conn->query($sql) === TRUE) {
-//        echo "Company returned";
-//    } else {
-//        echo "Error: " . $sql . "<br>" . $conn->error;
-//    }
-// } elseif ($method === 'Drivers'){
-//    
-//    if ($conn->query($sql) === TRUE) {
-//        echo "Driver returned";
-//    } else {
-//        echo "Error: " . $sql . "<br>" . $conn->error;
-//    }
-// } elseif ($method === 'ViewBookings'){
-//    
-//    if ($conn->query($sql) === TRUE) {
-//        echo "Booking returned";
-//    } else {
-//        echo "Error: " . $sql . "<br>" . $conn->error;
-//    }
-// }
+elseif ($method === 'Login'){
+	$result = DB::query("SELECT * FROM users WHERE email = '".$user_email."' AND password = '".$password."'");
+	if (DB::count() > 0) {
+		echo "<!DOCTYPE html>";
+		echo "<title>Taxi App</title>";
+		echo "<head>";
+		echo "<META http-equiv='refresh' content='0;URL=viewbookings.php'>";
+		echo "</head>";
+		echo "<body>";
+		echo "</body>";
+		echo "</html>";
+	}
+	elseif (DB::count() == 0) {
+		echo "<!DOCTYPE html>";
+		echo "<title>Taxi App</title>";
+		echo "<head>";
+		echo "<META http-equiv='refresh' content='1;URL=login.php'>";
+		echo "</head>";
+		echo "<body>";
+		echo "<p>Cannot find user, please try again.</p>";
+		echo "</body>";
+		echo "</html>";
+	}
+}
+elseif ($method === 'Register'){
+	DB::insert('users', array (
+	'user_id' => '0',
+	'password' => $password,
+	'fname' => $fname,
+	'lname' => $lname,
+	'email' => $user_email
+	));
+	DB::insertId();
+	echo "<!DOCTYPE html>";
+	echo "<title>Taxi App</title>";
+	echo "<head>";
+	echo "<META http-equiv='refresh' content='2;URL=login.php'>";
+	echo "</head>";
+	echo "<body>";
+	echo "<p>Successfully added data!</p>";
+	echo "</body>";
+	echo "</html>";
+}
 session_destroy();
 ?>
-<<<<<<< HEAD
-<!DOCTYPE html>
-=======
 <!-- <!DOCTYPE html>
->>>>>>> origin/master
-<title>Something</title>
+<title>Taxi App</title>
 <head>
-<META http-equiv="refresh" content="5;URL=drivers.php">
+<META http-equiv="refresh" content="2;URL=drivers.php">
 </head>
-<<<<<<< HEAD
 <body>
 <p>Successfully added data!</p>
 </body>
-</html>
-=======
 </html> -->
->>>>>>> origin/master

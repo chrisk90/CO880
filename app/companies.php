@@ -23,18 +23,20 @@ date_default_timezone_set('Europe/London');
 				<tr>
 					<td class="title-field">Companies</td>
 				</tr>
-				<tr>
-					<td class="field">Name<br />Address</td>
-				</tr>
-				<tr>
-					<td class="field">Name<br />Address</td>
-				</tr>
-				<tr>
-					<td class="field"></td>
-				</tr>
-				<tr>
-					<td class="field"></td>
-				</tr>
+				<?php
+					require_once("conn.php");
+					$results = DB::query("SELECT * FROM company");
+					if ($results == null) {
+						echo "No results";
+					}
+					else {
+						foreach ($results as $row) {
+							echo "<tr>";
+							echo "<td class='field'>".$row['name']."<br />".$row['address']."</td>";
+							echo "</tr>";
+						}
+					}
+				?>
 			</tbody>
 		</table>
 	</div>

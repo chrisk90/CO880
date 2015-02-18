@@ -23,12 +23,21 @@ date_default_timezone_set('Europe/London');
 				<tr>
 					<td class="title-field">Customers</td>
 				</tr>
-				<tr>
+				<?php
+					require_once("conn.php");
+					$results = DB::query("SELECT * FROM customer");
+					foreach ($results as $row) {
+						echo "<tr>";
+						echo "<td class='field'>".$row['customer_id']." - ".$row['passenger_name']."<br />".$row['phone_number']."</td>";
+						echo "</tr>";
+					}
+				?>
+<!-- 				<tr>
 					<td class="field">Name<br />Address</td>
 				</tr>
 				<tr>
 					<td class="field">Name<br />Address</td>
-				</tr>
+				</tr> -->
 				<tr>
 					<td class="field"></td>
 				</tr>

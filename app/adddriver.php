@@ -52,10 +52,9 @@ date_default_timezone_set('Europe/London');
 					</tr>
 					<tr>
 						<td class="field"><input type="text" name="email" placeholder="E-mail"></td>
-					</t>
+					</tr>
 				</tbody>
 			</table>
-			<!-- <input class="right-button button" type="submit" value="Done"> -->
 		</div>
 	</form>
 	<div class="footer">
@@ -65,11 +64,6 @@ date_default_timezone_set('Europe/London');
 	</div>
 	<?php
 		session_start();
-		// $driver_id = isset($_REQUEST['driver_id'])?$_REQUEST["driver_id"]:'';
-		// $drivername = isset($_REQUEST['name'])?$_REQUEST["name"]:'';
-		// $address = isset($_REQUEST['address'])?$_REQUEST["address"]:'';
-		// $drivernumber = isset($_REQUEST['phone_number'])?$_REQUEST["phone_number"]:'';
-		// $driveremail = isset($_REQUEST['email'])?$_REQUEST["email"]:'';
 		$_SESSION['method'] = "AddDriver";
 	?>
 </body>

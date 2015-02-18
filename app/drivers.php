@@ -5,6 +5,7 @@ Description:Layout css styles used for the site
 -->
 <?php
 date_default_timezone_set('Europe/London');
+require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.com/quickstart.php
 ?>
 <!DOCTYPE html>
 <title>Taxi App</title>
@@ -24,6 +25,15 @@ date_default_timezone_set('Europe/London');
 				<tr>
 					<td class="title-field">Drivers</td>
 				</tr>
+				<?php
+					require_once("conn.php");
+					$results = DB::query("SELECT name FROM driver");
+					foreach ($results as $row) {
+						echo "<tr>";
+						echo "<td class='field'>".$row['name']."</td>";
+						echo "</tr>";
+					}
+				?>
 				<tr>
 					<td class="field">Name<br />Available?</td>
 				</tr>
