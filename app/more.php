@@ -1,7 +1,6 @@
 <!-- 
 Author: C.Kelly
 Date:2014-NOV-17
-Description:Layout css styles used for the site 
 -->
 <?php
 date_default_timezone_set('Europe/London');
@@ -54,7 +53,7 @@ date_default_timezone_set('Europe/London');
 					<td class="field night" onclick="nightMode()">Night Time Mode</td>
 				</tr> -->
 				<tr>
-					<td class="field"><a href="login.php">Logout</a></td>
+					<td class="field"><a href="logout.php">Logout</a></td>
 				</tr>
 			</tbody>
 		</table>

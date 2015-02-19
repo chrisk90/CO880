@@ -60,7 +60,7 @@ define('DB_PASS', 'taxi');
 
 $database = new PDO(DB_TYPE.':host='.DB_HOST, DB_USER, DB_PASS);
 
-IF ($method === 'AddDriver'){
+if ($method === 'AddDriver'){
 	DB::insert('driver', array (
 	'driver_id' => $driver_id,
 	'name' => $drivername,
@@ -71,6 +71,15 @@ IF ($method === 'AddDriver'){
 	'holiday_id' => $holiday,
 	'active' => "1"
 	));
+	DB::insert('users', array (
+	'user_id' => '0',
+	'password' => "driver",
+	'fname' => $drivername,
+	'lname' => "Driver",
+	'email' => $driveremail,
+	'driver_id' => $driver_id
+	));
+	DB::insertId();
 	echo "<!DOCTYPE html>";
 	echo "<title>Taxi App</title>";
 	echo "<head>";
@@ -154,7 +163,12 @@ elseif ($method === 'AddBooking'){
 }
 elseif ($method === 'Login'){
 	$result = DB::query("SELECT * FROM users WHERE email = '".$user_email."' AND password = '".$password."'");
+	
 	if (DB::count() > 0) {
+		if ($password == "driver") {
+			DB::query("UPDATE driver SET active = 1 WHERE email_address ='".$user_email."'");
+		}
+		$_SESSION['user'] = $user_email;
 		echo "<!DOCTYPE html>";
 		echo "<title>Taxi App</title>";
 		echo "<head>";
@@ -163,6 +177,7 @@ elseif ($method === 'Login'){
 		echo "<body>";
 		echo "</body>";
 		echo "</html>";
+		
 	}
 	elseif (DB::count() == 0) {
 		echo "<!DOCTYPE html>";
@@ -195,14 +210,19 @@ elseif ($method === 'Register'){
 	echo "</body>";
 	echo "</html>";
 }
-session_destroy();
+elseif ($method === 'Logout'){
+	$driverresult = DB::query("SELECT * FROM driver WHERE email_address = '".$user_email."'");
+	if (DB::count() > 0) {
+		DB::query("UPDATE driver SET active = '0' WHERE email_address = '".$user_email."'");
+	}
+	echo "<!DOCTYPE html>";
+	echo "<title>Taxi App</title>";
+	echo "<head>";
+	echo "<META http-equiv='refresh' content='2;URL=login.php'>";
+	echo "</head>";
+	echo "<body>";
+	echo "<p>Successfully logged out!</p>";
+	echo "</body>";
+	echo "</html>";
+}
 ?>
-<!-- <!DOCTYPE html>
-<title>Taxi App</title>
-<head>
-<META http-equiv="refresh" content="2;URL=drivers.php">
-</head>
-<body>
-<p>Successfully added data!</p>
-</body>
-</html> -->

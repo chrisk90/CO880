@@ -1,7 +1,6 @@
 <!-- 
 Author: C.Kelly
 Date:2014-NOV-17
-Description:Layout css styles used for the site 
 -->
 <?php
 date_default_timezone_set('Europe/London');
@@ -26,7 +25,7 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 				</tr>
 				<?php
 					require_once("conn.php");
-					$results = DB::query("SELECT name FROM driver");
+					$results = DB::query("SELECT * FROM driver");
 					if ($results == null) {
 						echo "<tr>";
 						echo "<td class='field'>No results</td>";
@@ -34,7 +33,7 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 					}
 					foreach ($results as $row) {
 						echo "<tr>";
-						echo "<td class='field'>".$row['name']."</td>";
+						echo "<td class='field'>".$row['driver_id']." - ".$row['name']."<br />".$row['email_address']."<br />Active: ".$row['active']."</td>";
 						echo "</tr>";
 					}
 				?>

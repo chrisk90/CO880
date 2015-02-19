@@ -15,14 +15,17 @@ date_default_timezone_set('Europe/London');
 <body id="body">
 	<form method="post" action="conntest.php">
 		<div class="header">
-			<a href="register.php"><div class="left-button button">Register</div></a>
-			<div class="view-title">Login</div>
-			<div class="right-button button"><input type="submit" value="Login"></div>
+			<a href="more.php"><div class="left-button button">Cancel</div></a>
+			<div class="view-title">Logout</div>
+			<div class="right-button button"><input type="submit" value="Logout"></div>
 		</div>
 	
 		<div>
 			<table>
 				<tbody>
+					<tr>
+						<td class="title-field">Please re-enter your email and password to logout</td>
+					</tr>
 					<tr>
 						<td class="title-field">Email</td>
 					</tr>
@@ -37,13 +40,12 @@ date_default_timezone_set('Europe/London');
 					</tr>
 				</tbody>
 			</table>
-			
 		</div>
 	</form>
 	<div class="footer"></div>
 	<?php
 		session_start();
-		$_SESSION['method'] = "Login";
+		$_SESSION['method'] = "Logout";
 	?>
 </body>
 </html>
