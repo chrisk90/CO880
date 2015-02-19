@@ -26,6 +26,11 @@ date_default_timezone_set('Europe/London');
 				<?php
 					require_once("conn.php");
 					$results = DB::query("SELECT * FROM customer");
+					if ($results == null) {
+						echo "<tr>";
+						echo "<td class='field'>No results</td>";
+						echo "</tr>";
+					}
 					foreach ($results as $row) {
 						echo "<tr>";
 						echo "<td class='field'>".$row['customer_id']." - ".$row['passenger_name']."<br />".$row['phone_number']."</td>";

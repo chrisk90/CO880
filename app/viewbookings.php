@@ -24,6 +24,11 @@ Description:Layout css styles used for the site
 				<?php
 					require_once("conn.php");
 					$results = DB::query("SELECT customer_id, pickup, driver_id, pickup_address, dropoff_address, comment FROM booking");
+					if ($results == null) {
+						echo "<tr>";
+						echo "<td class='field'>No results</td>";
+						echo "</tr>";
+					}
 					foreach ($results as $row) {
 						$passenger = DB::queryFirstField("SELECT passenger_name FROM customer where customer_id = '".$row['customer_id']."'");
 						echo "<tr>";

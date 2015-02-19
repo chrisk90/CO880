@@ -28,7 +28,9 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 					require_once("conn.php");
 					$results = DB::query("SELECT * FROM company");
 					if ($results == null) {
-						echo "No results";
+						echo "<tr>";
+						echo "<td class='field'>No results</td>";
+						echo "</tr>";
 					}
 					foreach ($results as $row) {
 						echo "<tr>";
