@@ -65,7 +65,7 @@ date_default_timezone_set('Europe/London');
 	<div class="footer">
 		<a href="viewbookings.php"><div class="bookings button2">Bookings</div></a>
 		<a href="calendarview.php"><div class="calendar button2">Appointments</div></a>
-		<a href="more.php"><div class="more button2">More</a></div>
+		<a href="more.php"><div class="more button2">More</div></a>
 	</div>
 	<?php
 		session_start();

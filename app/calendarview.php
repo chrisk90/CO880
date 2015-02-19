@@ -32,7 +32,7 @@ $driver_id = isset($_REQUEST['driver_id'])?$_REQUEST["driver_id"]:"";
 						echo "</tr>";
 						echo "</tbody>";
 						echo "</table>";
-						echo "<div class='right-button button'><input type='submit' value='Done'></div>";
+						echo "<div class='right-button done'><input type='submit' value='Done'></div>";
 					}
 					else {
 						require_once("conn.php");

@@ -12,7 +12,6 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 <head>
 	<link rel="stylesheet" href="css/layout.css">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<!-- <META http-equiv="refresh" content="5;URL=more.php"> -->
 </head>
 <body id="body">
 	<div class="header">
@@ -28,6 +27,9 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 				<?php
 					require_once("conn.php");
 					$results = DB::query("SELECT name FROM driver");
+					if ($results == null) {
+						echo "No results";
+					}
 					foreach ($results as $row) {
 						echo "<tr>";
 						echo "<td class='field'>".$row['name']."</td>";
@@ -35,16 +37,7 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 					}
 				?>
 				<tr>
-					<td class="field">Name<br />Available?</td>
-				</tr>
-				<tr>
-					<td class="field">Name<br />Available?</td>
-				</tr>
-				<tr>
-					<td class="field"></td>
-				</tr>
-				<tr>
-					<td class="field"></td>
+					<td class="field" style="color:blue;"><a href="javascript:history.go(0)">Load More ...<span class="arrow">></span></a></td>
 				</tr>
 			</tbody>
 		</table>

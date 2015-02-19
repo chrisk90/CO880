@@ -27,7 +27,7 @@ Description:Layout css styles used for the site
 					foreach ($results as $row) {
 						$passenger = DB::query("SELECT passenger_name FROM customer where customer_id = '".$row['customer_id']."'");
 						echo "<tr>";
-						echo "<td class='field'>".$row['customer_id']." - ".$passenger."<br />".$row['driver_id']."<br />".$row['pickup']."<br />".$row['pickup_address']."<br />".$row['dropoff_address']."<br />".$row['comment']."</td>";
+						echo "<td class='field'>".$row['customer_id']." - ".$passenger."<br />Driver: ".$row['driver_id']."<br />Pickup Time:".$row['pickup']."<br />Pickup: ".$row['pickup_address']."<br />Dropoff: ".$row['dropoff_address']."<br />Comments: ".$row['comment']."</td>";
 						echo "</tr>";
 					}
 				?>

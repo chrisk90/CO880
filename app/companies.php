@@ -5,6 +5,7 @@ Description:Layout css styles used for the site
 -->
 <?php
 date_default_timezone_set('Europe/London');
+require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.com/quickstart.php
 ?>
 <!DOCTYPE html>
 <title>Taxi App</title>
@@ -29,14 +30,15 @@ date_default_timezone_set('Europe/London');
 					if ($results == null) {
 						echo "No results";
 					}
-					else {
-						foreach ($results as $row) {
-							echo "<tr>";
-							echo "<td class='field'>".$row['name']."<br />".$row['address']."</td>";
-							echo "</tr>";
-						}
+					foreach ($results as $row) {
+						echo "<tr>";
+						echo "<td class='field'>".$row['name']."<br />".$row['address']."</td>";
+						echo "</tr>";
 					}
 				?>
+				<tr>
+					<td class="field" style="color:blue;"><a href="javascript:history.go(0)">Load More ...<span class="arrow">></span></a></td>
+				</tr>
 			</tbody>
 		</table>
 	</div>

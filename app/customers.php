@@ -32,17 +32,8 @@ date_default_timezone_set('Europe/London');
 						echo "</tr>";
 					}
 				?>
-<!-- 				<tr>
-					<td class="field">Name<br />Address</td>
-				</tr>
 				<tr>
-					<td class="field">Name<br />Address</td>
-				</tr> -->
-				<tr>
-					<td class="field"></td>
-				</tr>
-				<tr>
-					<td class="field"></td>
+					<td class="field" style="color:blue;"><a href="javascript:history.go(0)">Load More ...<span class="arrow">></span></a></td>
 				</tr>
 			</tbody>
 		</table>
