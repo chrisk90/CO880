@@ -3,29 +3,15 @@ Author: C.Kelly
 Date:2014-DEC-02
 Description:Javascript for the application
 */
-
 function nightMode() {
-	$("#body").css("color", "white");
-	$(".header").css("background-color", "#08088A");
-	$(".footer").css("background-color", "#08088A");
+	var nightmode = true;
+	alert(nightmode);
+	$("#body").css("color", "black");
+	$(".header").css("background-color", "gray");
+	$(".footer").css("background-color", "gray");
 }
 function dayMode() {
 	$("#body").css("color", "black");
 	$(".header").css("background-color", "yellow");
 	$(".footer").css("background-color", "yellow");
-}
-function displayDriver() {
-
-}
-function submitDriver() {
-	$.ajax({
-       url: "ajax_addDriver.php",
-       type: "post",
-       success: function(){
-		alert("success");
-       },
-       error:function(){
-		alert("failure");
-       }
-   });
 }

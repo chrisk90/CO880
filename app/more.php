@@ -8,21 +8,9 @@ date_default_timezone_set('Europe/London');
 <!DOCTYPE html>
 <title>Taxi App</title>
 <head>
-	<link rel="stylesheet" href="css/layout.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="js/main.js" type="text/javascript"></script>
-	<script type="text/javascript">
-	function nightMode() {
-		$("body").css("color", "black");
-		$(".header").css("background-color", "#08088A");
-		$(".footer").css("background-color", "#08088A");
-	}
-	function dayMode() {
-		$("body").css("color", "black");
-		$(".header").css("background-color", "yellow");
-		$(".footer").css("background-color", "yellow");
-	}
-</script>
+	<?php
+		include("inc/head.php");
+	?>
 </head>
 <body id="body">
 	<div class="header">
@@ -49,9 +37,9 @@ date_default_timezone_set('Europe/London');
 				<tr>
 					<td class="field night" onclick="dayMode()">Day Time Mode</td>
 				</tr>
-				<!-- <tr>
+				<tr>
 					<td class="field night" onclick="nightMode()">Night Time Mode</td>
-				</tr> -->
+				</tr>
 				<tr>
 					<td class="field"><a href="logout.php">Logout</a></td>
 				</tr>

@@ -4,8 +4,8 @@ Description:Layout css styles used for the site */
 
 /*IPAD
 ==========================================================*/
-@media only screen and (max-width: 769px) {
-
+/*@media only screen and (max-width: 769px) {
+*/
 ::-webkit-scrollbar {
 	width: 0px;
 }
@@ -153,7 +153,7 @@ tbody {
 .bookings {
 	background: url(../images/bookmark.png) no-repeat;
 	float: left;
-	margin-left: 15px;
+	margin-left: 20px;
 }
 .calendar {
 	background: url(../images/calendar.png) no-repeat;
@@ -184,10 +184,6 @@ tbody {
 	margin-right: 20px;
 	color: #D8D8D8;
 }
-.addfiller {
-	height: 452px;
-	background-color: white;
-}
 .night {
 	cursor: pointer;
 }
@@ -204,7 +200,7 @@ tbody {
 	border-radius: 7px;
 	text-align: center;
 }
-}
+/*}*/
 
 /*IPHONE
 ==========================================================*/
@@ -245,8 +241,6 @@ body {
 }
 .cal-title {
 	font-size: 1.3em;
-	width: 100%;
-	text-align: center;
 }
 .customer-title {
 	font-size: 1.3em;
@@ -260,6 +254,9 @@ body {
 }
 .footer div {
 	padding-top: 35px;
+	line-height: 69px;
+	background-position: 50% 20px;
+	width: 31%;
 }
 .button {
 }
@@ -268,11 +265,6 @@ body {
 }
 .field {
 	font-size: 1.5em;
-}
-.footer div {
-	line-height: 69px;
-	background-position: 50% 20px;
-	width: 31%;
 }
 .bookings {
 	margin-left: 0px;

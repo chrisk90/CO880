@@ -9,8 +9,9 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 <!DOCTYPE html>
 <title>Taxi App</title>
 <head>
-	<link rel="stylesheet" href="css/layout.css">
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<?php
+		include("inc/head.php");
+	?>
 </head>
 <body id="body">
 	<div class="header">
