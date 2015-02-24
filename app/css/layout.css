@@ -82,8 +82,8 @@ tbody {
 	display: inline-block;
 	font-size: 1.6em;
 	font-weight: bold;
-	width: 48%;
-	text-align: center;
+	width: 60%;
+	text-align: right;
 	margin-left: 2px;
 }
 .more-title {
@@ -199,7 +199,8 @@ tbody {
 	cursor: pointer;
 }
 .button input{
-	background-color: gray;
+	background-color: inherit;
+	color: inherit;
 }
 .done {
 	background-color: none;
@@ -238,7 +239,7 @@ body {
 }
 .view-title {
 	font-size: 1.3em;
-	width: 51%;
+	width: 63%;
 }
 .add-title {
 	font-size: 1.1em;

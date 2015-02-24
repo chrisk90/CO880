@@ -17,7 +17,7 @@ date_default_timezone_set('Europe/London');
 	<form method="post" action="conntest.php">
 		<div class="header">
 			<a href="more.php"><div class="left-button button">Cancel</div></a>
-			<div class="view-title">Logout</div>
+			<div class="add-title">Logout</div>
 			<div class="right-button button"><input type="submit" value="Logout"></div>
 		</div>
 	

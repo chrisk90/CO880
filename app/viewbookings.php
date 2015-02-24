@@ -14,7 +14,7 @@ Date:2014-NOV-17
 </head>
 <body id="body">
 	<div class="header day">
-		<a href="#"><div class="left-button button">Edit</div></a>
+		<!-- <a href="#"><div class="left-button button">Edit</div></a> -->
 		<div class="view-title">Bookings</div>
 		<a class="add" href="addbooking.php"><div class="right-button button"><strong>+</strong></div></a>
 	</div>

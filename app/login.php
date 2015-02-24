@@ -17,7 +17,7 @@ date_default_timezone_set('Europe/London');
 	<form method="post" action="conntest.php">
 		<div class="header">
 			<a href="register.php"><div class="left-button button">Register</div></a>
-			<div class="view-title">Login</div>
+			<div class="add-title">Login</div>
 			<div class="right-button button"><input type="submit" value="Login"></div>
 		</div>
 	

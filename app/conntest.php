@@ -109,7 +109,7 @@ elseif ($method === 'AddCustomer'){
 	echo "</html>";
 }
 elseif ($method === 'AddCompany'){
-	DB::insert('customer', array (
+	DB::insert('company', array (
     'company_id' => '0',
 	'name' => $company_name,
 	'address' => $company_address,

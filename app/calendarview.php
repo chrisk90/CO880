@@ -38,8 +38,9 @@ $driver_id = isset($_REQUEST['driver_id'])?$_REQUEST["driver_id"]:"";
 						require_once("conn.php");
 						$results = DB::query("SELECT customer_id, pickup, driver_id, pickup_address, dropoff_address, comment FROM booking WHERE driver_id = '".$driver_id."'");
 						foreach ($results as $row) {
+							$passenger = DB::queryFirstField("SELECT passenger_name FROM customer where customer_id = '".$row['customer_id']."'");
 							echo "<tr>";
-							echo "<td class='field'>".$row['customer_id']."<br />".$row['driver_id']."<br />".$row['pickup']."<br />".$row['pickup_address']."<br />".$row['dropoff_address']."<br />".$row['comment']."</td>";
+							echo "<td class='field'>".$row['customer_id']." - ".$passenger."<br />".$row['driver_id']."<br />".$row['pickup']."<br />".$row['pickup_address']."<br />".$row['dropoff_address']."<br />".$row['comment']."</td>";
 							echo "</tr>";
 						}
 					}
