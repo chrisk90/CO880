@@ -34,7 +34,7 @@ require_once("classes/meekrodb.2.3.class.php"); // Refer to http://www.meekro.co
 					}
 					foreach ($results as $row) {
 						echo "<tr>";
-						echo "<td class='field'>".$row['name']."<br />".$row['address']."</td>";
+						echo "<td class='field'>".$row['contact_name']."<br />".$row['phone_number']."<br />".$row['name']."<br />".$row['address']."</td>";
 						echo "</tr>";
 					}
 				?>
