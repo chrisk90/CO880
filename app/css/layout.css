@@ -22,6 +22,7 @@ textarea:focus {
 }
 a {
 	text-decoration: none;
+	color: inherit;
 }
 body {
 	margin-top: 120px;
@@ -29,6 +30,16 @@ body {
 	margin-left: -2px;
 	margin-bottom: 135px;
 	color: black;
+}
+.day {
+	color: black !important;
+	/*background-color: yellow;*/
+	background-color: #D8D8D8;
+}
+.night {
+	color: #FAFAFA !important;
+	/*background-color: gray;*/
+	background-color: #424242;
 }
 table {
 	overflow-y: scroll;
@@ -44,7 +55,7 @@ tbody {
 	right: 0;
 	padding-top: 65px;
 	height: 70px;
-	background-color: gray;
+	/*background-color: gray;*/
 	font-size: 1.6em;
 	display: block;
 }
@@ -55,7 +66,7 @@ tbody {
 	right: 0;
 	padding-top: 50px;
 	height: 70px;
-	background-color: gray;
+	/*background-color: gray;*/
 	display: block;
 	font-size: 1.5em;
 }
@@ -158,7 +169,7 @@ tbody {
 .calendar {
 	background: url(../images/calendar.png) no-repeat;
 	margin-left: 5px;
-	color: white;
+	/*color: white;*/
 }
 .more {
 	background: url(../images/layer.png) no-repeat;
@@ -184,7 +195,7 @@ tbody {
 	margin-right: 20px;
 	color: #D8D8D8;
 }
-.night {
+.mode {
 	cursor: pointer;
 }
 .button input{

@@ -13,7 +13,7 @@ Date:2014-NOV-17
 	?>
 </head>
 <body id="body">
-	<div class="header">
+	<div class="header day">
 		<a href="#"><div class="left-button button">Edit</div></a>
 		<div class="view-title">Bookings</div>
 		<a class="add" href="addbooking.php"><div class="right-button button"><strong>+</strong></div></a>
@@ -42,7 +42,7 @@ Date:2014-NOV-17
 			</tbody>
 		</table>
 	</div>
-	<div class="footer">
+	<div class="footer day">
 		<a href="viewbookings.php"><div class="bookings button2">Bookings</div></a>
 		<a href="calendarview.php"><div class="calendar button2">Appointments</div></a>
 		<a href="more.php"><div class="more button2">More</div></a>
