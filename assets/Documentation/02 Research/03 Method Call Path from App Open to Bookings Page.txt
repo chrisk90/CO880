@@ -1,0 +1,136 @@
+APPLICATION METHOD CALL PATH FROM OPEN TO INITIAL BOOKING SCREEN
+
+2014-07-17 12:55:20.562 TaxiCloud[3841:60b] Method : main
+2014-07-17 12:55:22.845 TaxiCloud[3841:60b] Method : application
+2014-07-17 12:55:22.975 TaxiCloud[3841:60b] Class : BookingsTVC, Method : viewDidLoad
+2014-07-17 12:55:22.976 TaxiCloud[3841:60b] Class : BookingsTVC, Method : setUpTableViewConfig
+2014-07-17 12:55:22.977 TaxiCloud[3841:60b] Class : BookingsTVC, Method : setUpNavBarConfig
+2014-07-17 12:55:22.978 TaxiCloud[3841:60b] Class : BookingsTVC, Method : setUpRefreshConfig
+2014-07-17 12:55:23.015 TaxiCloud[3841:60b] Class : BookingsTVC, Method : loadMoreBookings
+2014-07-17 12:55:23.016 TaxiCloud[3841:60b] Class : BookingsTVC, Method : searchBookingsFromDate
+2014-07-17 12:55:23.017 TaxiCloud[3841:60b] Class : CloudController, Method : init
+2014-07-17 12:55:23.018 TaxiCloud[3841:60b] Class : CloudController, Method : haveAccessToken
+2014-07-17 12:55:23.018 TaxiCloud[3841:60b] Class : CloudController, Method : haveAccessToken, if no
+2014-07-17 12:55:23.019 TaxiCloud[3841:60b] Class : BookingsTVC, Method : prepareForSegue
+2014-07-17 12:55:23.038 TaxiCloud[3841:60b] Class : BookingsTVC, Method : prepareForSegue, else if 2
+2014-07-17 12:55:23.084 TaxiCloud[3841:60b] Class : LoginViewController, Method : viewDidLoad
+2014-07-17 12:55:23.438 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : initWithFrame
+2014-07-17 12:55:24.277 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : initWithFrame, if
+2014-07-17 12:55:24.306 TaxiCloud[3841:60b] Class : LoginViewController, Method : loadOauth
+2014-07-17 12:55:24.307 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : authorizeUserWithClientID
+2014-07-17 12:55:24.312 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : checkIfAccessTokenInfoFileExists
+2014-07-17 12:55:24.312 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : authorizeUserWithClientID, else
+2014-07-17 12:55:24.313 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : showWebviewForUserLogin
+2014-07-17 12:55:24.314 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : showWebviewForUserLogin, for
+2014-07-17 12:55:24.314 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : urlEncodeString
+2014-07-17 12:55:24.351 TaxiCloud[3841:60b] Class : BookingsTVC, Method : getCompaniesFromCloud
+2014-07-17 12:55:24.352 TaxiCloud[3841:60b] Class : CloudController, Method : init
+2014-07-17 12:55:24.352 TaxiCloud[3841:60b] Class : CloudController, Method : getCompanies
+2014-07-17 12:55:24.353 TaxiCloud[3841:60b] Class : CloudController, Method : postConnect
+2014-07-17 12:55:24.353 TaxiCloud[3841:60b] dictionary sent to cloud {
+    dbname = mainTaxiCloud;
+    functionName = getCompanies;
+    host = "ec2-54-200-105-143.us-west-2.compute.amazonaws.com";
+    password = taxicloud12;
+    port = 3306;
+    user = kentuni12;
+}
+2014-07-17 12:55:24.495 TaxiCloud[3841:60b] Class : BookingsTVC, Method : numberOfSectionsInTableView
+2014-07-17 12:55:24.496 TaxiCloud[3841:60b] Class : BookingsTVC, Method : tableView numberOfRowsInSection
+2014-07-17 12:55:24.496 TaxiCloud[3841:60b] Class : BookingsTVC, Method : tableView heightForRowAtIndexPath
+2014-07-17 12:55:24.499 TaxiCloud[3841:60b] Class : BookingsTVC, Method : tableView cellForRowAtIndexPath
+2014-07-17 12:55:24.500 TaxiCloud[3841:60b] Class : BookingsTVC, Method : tableView cellForRowAtIndexPath, else
+2014-07-17 12:55:24.978 TaxiCloud[3841:60b] Class : BookingsTVC, Method : tableView canEditRowAtIndexPath
+2014-07-17 12:55:24.979 TaxiCloud[3841:60b] Class : BookingsTVC, Method : tableView canEditRowAtIndexPath
+2014-07-17 12:55:24.989 TaxiCloud[3841:60b] Method : applicationDidBecomeActive
+2014-07-17 12:55:28.035 TaxiCloud[3841:60b] Class : CloudController, Method : connection didReceiveResponse
+2014-07-17 12:55:28.036 TaxiCloud[3841:60b] 200
+2014-07-17 12:55:28.037 TaxiCloud[3841:60b] Class : CloudController, Method : connection
+2014-07-17 12:55:28.105 TaxiCloud[3841:60b] receivedData <7b227061 7373223a 66616c73 652c2276 65726966 6965645f 636c6965 6e744944 223a6661 6c73657d>
+2014-07-17 12:55:28.105 TaxiCloud[3841:60b] string data encoded {"pass":false,"verified_clientID":false}
+2014-07-17 12:55:28.106 TaxiCloud[3841:60b] stringdata {"pass":false,"verified_clientID":false}
+2014-07-17 12:55:28.106 TaxiCloud[3841:60b] Class : CloudController, Method : connectionDidFinishLoading
+2014-07-17 12:55:28.106 TaxiCloud[3841:60b] Request Complete received 40 bytes of data
+2014-07-17 12:55:28.107 TaxiCloud[3841:60b] Class : BookingsTVC, Method : requestReturnedData
+2014-07-17 12:55:28.107 TaxiCloud[3841:60b] Class : BookingsTVC, Method : requestReturnedData, if dictionary != nil
+2014-07-17 12:55:28.107 TaxiCloud[3841:60b] Class : BookingsTVC, Method : requestReturnedData, if, else if 3
+2014-07-17 12:55:28.150 TaxiCloud[3841:60b] Class : BookingsTVC, Method : populate
+2014-07-17 12:55:28.230 TaxiCloud[3841:60b] Unbalanced calls to begin/end appearance transitions for <UITabBarController: 0xa2daa30>.
+2014-07-17 12:55:33.769 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad
+2014-07-17 12:55:33.785 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad, else
+2014-07-17 12:55:34.037 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad
+2014-07-17 12:55:34.037 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad, else
+
+Everything above this point is the load from opening the application to the Google permissions check page view
+
+Everything below this point is from the action of clicking ‘accept’ on the Google permissions check page view to the bookings page
+
+2014-07-17 13:07:17.414 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad
+2014-07-17 13:07:17.435 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad, if
+2014-07-17 13:07:17.436 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : exchangeAuthorizationCodeForAccessToken
+2014-07-17 13:07:17.453 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : makeRequest
+2014-07-17 13:07:17.734 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad
+2014-07-17 13:07:17.734 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : webViewDidFinishLoad, else
+2014-07-17 13:07:17.947 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : connection didReceiveData
+2014-07-17 13:07:17.948 TaxiCloud[3841:60b] connect finish load <7b0a2020 22616363 6573735f 746f6b65 6e22203a 20227961 32392e52 5142716d 53687745 48336756 426f4141 41444a5a 666e524f 30544279 68786677 7353385a 596a4545 50654a4f 464c6851 30514930 30674850 6e70304a 51222c0a 20202274 6f6b656e 5f747970 6522203a 20224265 61726572 222c0a20 20226578 70697265 735f696e 22203a20 33363030 2c0a2020 2269645f 746f6b65 6e22203a 20226579 4a686247 63694f69 4a53557a 49314e69 4973496d 74705a43 4936496a 4d354e54 6b325a47 4d7a5954 4e6d4d54 4a685954 6330596a 51344d54 55334f57 55305a57 4d354e44 526d4f44 5a6b4d6a 52694f54 55696651 2e65794a 7063334d 694f694a 6859324e 76645735 30637935 6e623239 6e624755 75593239 74496977 69615751 694f6949 784d544d 324d4467 314d7a59 304d4441 334d4441 334f4459 344e7a41 694c434a 7a645749 694f6949 784d544d 324d4467 314d7a59 304d4441 334d4441 334f4459 344e7a41 694c434a 68656e41 694f6949 344e7a6b 784e4441 314d7a59 354d5459 745a5752 69615445 304d7a6c 6b616d68 6d62335a 6c635770 79634468 79616e4d 354d4464 7863546c 6b595467 75595842 77637935 6e623239 6e624756 31633256 79593239 75644756 75644335 6a623230 694c434a 6c625746 70624349 36496e52 6865476c 6a624739 315a4445 79514764 7459576c 734c6d4e 76625349 73496d46 30583268 68633267 694f694a 564f4442 305a4768 3653324e 4f616b46 57583270 434f5774 784d3364 6e496977 695a5731 68615778 66646d56 7961575a 705a5751 694f6e52 79645755 73496d46 315a4349 36496a67 334f5445 304d4455 7a4e6a6b 784e6931 6c5a474a 704d5451 7a4f5752 7161475a 76646d56 78616e4a 774f484a 71637a6b 774e3346 784f5752 684f4335 68634842 7a4c6d64 76623264 735a5856 7a5a584a 6a623235 305a5735 304c6d4e 76625349 73496e52 76613256 75583268 68633267 694f694a 564f4442 305a4768 3653324e 4f616b46 57583270 434f5774 784d3364 6e496977 69646d56 7961575a 705a5752 665a5731 68615777 694f6e52 79645755 73496d4e 705a4349 36496a67 334f5445 304d4455 7a4e6a6b 784e6931 6c5a474a 704d5451 7a4f5752 7161475a 76646d56 78616e4a 774f484a 71637a6b 774e3346 784f5752 684f4335 68634842 7a4c6d64 76623264 735a5856 7a5a584a 6a623235 305a5735 304c6d4e 76625349 73496d6c 68644349 364d5451 774e5455 354f4455 7a4f4377 695a5868 77496a6f 784e4441 314e6a41 794e444d 3466512e 584f576f 376f5179 65476c31 49315955 41503359 2d446236 6331766d 7162337a 664a385f 38683074 4c397061 3966686c 4b364852 48526946 69676a70 516c5656 72374357 696f706b 70726735 34664e7a 67796252 39673557 546a3846 51505f70 3434706f 6d31746a 4e4c6f72 4d566a50 4e39337a 4d51316c 71795242 626f4b6e 6a546c39 4d414875 56327a61 70734756 67517a6b 5a6a4f76 386c7a6c 6537675a 3948356c 4a51776d 43593022 2c0a2020 22726566 72657368 5f746f6b 656e2220 3a202231 2f514153 6d327159 33395256 4833444b 70474d70 785f5979 59536a36 35374476 4a6d7377 49626f67 4b6a6341 220a7d>
+2014-07-17 13:07:17.949 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : connectionDidFinishLoading
+2014-07-17 13:07:17.950 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : connectionDidFinishLoading, if 3
+2014-07-17 13:07:17.950 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : storeAccessTokenInfo
+2014-07-17 13:07:17.951 TaxiCloud[3841:60b] access token info HERE {
+    "access_token" = "ya29.RQBqmShwEH3gVBoAAADJZfnRO0TByhxfwsS8ZYjEEPeJOFLhQ0QI00gHPnp0JQ";
+    "expires_in" = 3600;
+    "id_token" = "eyJhbGciOiJSUzI1NiIsImtpZCI6IjM5NTk2ZGMzYTNmMTJhYTc0YjQ4MTU3OWU0ZWM5NDRmODZkMjRiOTUifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiaWQiOiIxMTM2MDg1MzY0MDA3MDA3ODY4NzAiLCJzdWIiOiIxMTM2MDg1MzY0MDA3MDA3ODY4NzAiLCJhenAiOiI4NzkxNDA1MzY5MTYtZWRiaTE0Mzlkamhmb3ZlcWpycDhyanM5MDdxcTlkYTguYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJlbWFpbCI6InRheGljbG91ZDEyQGdtYWlsLmNvbSIsImF0X2hhc2giOiJVODB0ZGh6S2NOakFWX2pCOWtxM3dnIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImF1ZCI6Ijg3OTE0MDUzNjkxNi1lZGJpMTQzOWRqaGZvdmVxanJwOHJqczkwN3FxOWRhOC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInRva2VuX2hhc2giOiJVODB0ZGh6S2NOakFWX2pCOWtxM3dnIiwidmVyaWZpZWRfZW1haWwiOnRydWUsImNpZCI6Ijg3OTE0MDUzNjkxNi1lZGJpMTQzOWRqaGZvdmVxanJwOHJqczkwN3FxOWRhOC5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImlhdCI6MTQwNTU5ODUzOCwiZXhwIjoxNDA1NjAyNDM4fQ.XOWo7oQyeGl1I1YUAP3Y-Db6c1vmqb3zfJ8_8h0tL9pa9fhlK6HRHRiFigjpQlVVr7CWiopkprg54fNzgybR9g5WTj8FQP_p44pom1tjNLorMVjPN93zMQ1lqyRBboKnjTl9MAHuV2zapsGVgQzkZjOv8lzle7gZ9H5lJQwmCY0";
+    "refresh_token" = "1/QASm2qY39RVH3DKpGMpx_YyYSj657DvJmswIbogKjcA";
+    "token_type" = Bearer;
+}
+2014-07-17 13:07:17.952 TaxiCloud[3841:60b] Class : CloudController, Method : init
+2014-07-17 13:07:17.952 TaxiCloud[3841:60b] Class : CloudController, Method : setAccessToken
+2014-07-17 13:07:17.977 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : storeAccessTokenInfo, if 2
+2014-07-17 13:07:17.996 TaxiCloud[3841:60b] access token received and stored
+2014-07-17 13:07:17.997 TaxiCloud[3841:60b] Class : LoginViewController, Method : authorizationWasSuccessful
+2014-07-17 13:07:17.998 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : callAPI
+2014-07-17 13:07:17.998 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : callAPI, else
+2014-07-17 13:07:17.998 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : callAPI, else, case 1
+2014-07-17 13:07:17.999 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : makeRequest
+2014-07-17 13:07:18.194 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : connection didReceiveData
+2014-07-17 13:07:18.195 TaxiCloud[3841:60b] connect finish load <7b0a2022 6964223a 20223131 33363038 35333634 30303730 30373836 38373022 2c0a2022 656d6169 6c223a20 22746178 69636c6f 75643132 40676d61 696c2e63 6f6d222c 0a202276 65726966 6965645f 656d6169 6c223a20 74727565 2c0a2022 6e616d65 223a2022 222c0a20 22676976 656e5f6e 616d6522 3a202222 2c0a2022 66616d69 6c795f6e 616d6522 3a202222 2c0a2022 70696374 75726522 3a202268 74747073 3a2f2f6c 68332e67 6f6f676c 65757365 72636f6e 74656e74 2e636f6d 2f2d5864 55497164 4d6b4357 412f4141 41414141 41414141 492f4141 41414141 41414141 412f3432 35327273 63627635 4d2f7068 6f746f2e 6a706722 2c0a2022 67656e64 6572223a 20226f74 68657222 0a7d0a>
+2014-07-17 13:07:18.195 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : connectionDidFinishLoading
+2014-07-17 13:07:18.196 TaxiCloud[3841:60b] Class : GoogleOauth2, Method : connectionDidFinishLoading, if 6
+2014-07-17 13:07:18.196 TaxiCloud[3841:60b] Class : LoginViewController, Method : responseFromServiceWasReceived
+2014-07-17 13:07:18.196 TaxiCloud[3841:60b] JSON STRING GOOGLE OAUTH {
+ "id": "113608536400700786870",
+ "email": "taxicloud12@gmail.com",
+ "verified_email": true,
+ "name": "",
+ "given_name": "",
+ "family_name": "",
+ "picture": "https://lh3.googleusercontent.com/-XdUIqdMkCWA/AAAAAAAAAAI/AAAAAAAAAAA/4252rscbv5M/photo.jpg",
+ "gender": "other"
+}
+2014-07-17 13:07:18.197 TaxiCloud[3841:60b] Class : LoginViewController, Method : responseFromServiceWasReceived, if
+2014-07-17 13:07:18.197 TaxiCloud[3841:60b] Class : LoginViewController, Method : verifyEmail
+2014-07-17 13:07:18.197 TaxiCloud[3841:60b] Class : CloudController, Method : init
+2014-07-17 13:07:18.198 TaxiCloud[3841:60b] Class : CloudController, Method : verifyEmail
+2014-07-17 13:07:18.198 TaxiCloud[3841:60b] Class : CloudController, Method : postConnect
+2014-07-17 13:07:18.199 TaxiCloud[3841:60b] dictionary sent to cloud {
+    dbname = mainTaxiCloud;
+    host = "ec2-54-200-105-143.us-west-2.compute.amazonaws.com";
+    password = taxicloud12;
+    port = 3306;
+    token = "ya29.RQBqmShwEH3gVBoAAADJZfnRO0TByhxfwsS8ZYjEEPeJOFLhQ0QI00gHPnp0JQ";
+    user = kentuni12;
+}
+2014-07-17 13:07:18.645 TaxiCloud[3841:60b] Class : CloudController, Method : connection didReceiveResponse
+2014-07-17 13:07:18.646 TaxiCloud[3841:60b] 200
+2014-07-17 13:07:18.646 TaxiCloud[3841:60b] Class : CloudController, Method : connection
+2014-07-17 13:07:18.646 TaxiCloud[3841:60b] receivedData <7b227061 7373223a 74727565 2c227665 72696669 65645f65 6d61696c 223a7472 75657d>
+2014-07-17 13:07:18.647 TaxiCloud[3841:60b] string data encoded {"pass":true,"verified_email":true}
+2014-07-17 13:07:18.647 TaxiCloud[3841:60b] stringdata {"pass":true,"verified_email":true}
+2014-07-17 13:07:18.647 TaxiCloud[3841:60b] Class : CloudController, Method : connectionDidFinishLoading
+2014-07-17 13:07:18.648 TaxiCloud[3841:60b] Request Complete received 35 bytes of data
+2014-07-17 13:07:18.648 TaxiCloud[3841:60b] Class : LoginViewController, Method : requestReturnedData
+2014-07-17 13:07:18.648 TaxiCloud[3841:60b] Class : LoginViewController, Method : requestReturnedData, if 1
+2014-07-17 13:07:18.649 TaxiCloud[3841:60b] Class : LoginViewController, Method : requestReturnedData, if 2
+2014-07-17 13:07:18.649 TaxiCloud[3841:60b] Class : BookingsTVC, Method : selectorhold
+
+At this point, the application is load and is displaying the (empty) bookings page
